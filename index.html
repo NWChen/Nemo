@@ -6,11 +6,13 @@
 <body onload="startTime();">
 	<script src=script.js></script>
 
-	<div id="time">00:00</div>
-	<form>
-		Work: <input type="number" name="worktime" min="0" max="60">
-		Relax: <input type="number" name="relaxtime" min="0" max="60">
-	</form>
-	<button id="button" onclick="changeButton();">Start</button>
+	<div id="box">
+		<div id="time">00:00</div>
+		<form>
+			Work: <input type="number" id="worktime" min="0" max="60" value="60">
+			Relax: <input type="number" id="relaxtime" min="0" max="60" value="10">
+		</form>
+		<button id="button" onclick="changeButton();">Start</button>
+	</div>
 </body>
 </html>
