@@ -10,11 +10,11 @@ function startTime(){
 		var relax = (60*ascertainZero(document.getElementById("relaxminutes").value)) + ascertainZero(document.getElementById("relaxseconds").value);
 		if(working && !isPaused){
 			if(time <= work){ incrementTime(); document.getElementById("time").style.color = "#f5f5f5"; }
-			else{ sound.play(); time = 0; working = false; document.getElementById("time").style.color = "#c0392b"; document.getElementById("status").innerHTML = "relaxing"; }
+			else{ sound.play(); time = 0; working = false; document.getElementById("time").style.color = "#c0392b"; document.getElementById("status").innerHTML = "relaxing!"; }
 		}
 		else if(!isPaused){
 			if(time <= relax){ incrementTime(); document.getElementById("time").style.color = "#f5f5f5"; }
-			else{ sound.play(); time = 0; working = true; document.getElementById("time").style.color = "#c0392b"; document.getElementById("status").innerHTML = "working"; }
+			else{ sound.play(); time = 0; working = true; document.getElementById("time").style.color = "#c0392b"; document.getElementById("status").innerHTML = "working!"; }
 		}
 	}, 1000);
 }
@@ -38,6 +38,6 @@ function checkTime(i){
 function changeButton(){
 	isPaused = !isPaused;
 	element = document.getElementById("button");
-	if(element.innerHTML==="Start") element.innerHTML = "Stop";
-	else element.innerHTML = "Start";
+	if(element.innerHTML==="START") element.innerHTML = "STOP";
+	else element.innerHTML = "START";
 }

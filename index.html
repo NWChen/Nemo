@@ -12,26 +12,26 @@
       	vertical-align: middle;
       	font-family: 'Lato', sans-serif;
       	text-align: center;
-      	margin-top: 10em;
+      	margin-top: 5em;
       	margin-left: auto;
       	margin-right: auto;
         padding-top: 40px;
         padding-bottom: 40px;
-        background-image: url('background.jpg');
+        /*background-image: url('background.jpg');*/
         background-position: top center;
         background-color: #3498db;
       }
 
+      #heading {
+      	color: #000000;
+      	opacity: 0.75;
+      	font-family: 'Montserrat', "Lato", sans-serif;
+      }
+
       #status {
-      	max-width: 170px;
-      	vertical-align: middle;
-      	color: #ecf0f1;
+      	color: #000000;
       	font-size: 2em;
-      	margin-left: auto;
-      	margin-right: auto;
-      	opacity: 0.5;
-      	background-color: #000000;
-      	border-radius: 6px;
+      	opacity: 0.8;
       }
 
       #time {
@@ -92,12 +92,16 @@
 </head>
 
 <body onload="startTime();">
-	<div id="status">working</div>
+	<div id="heading">
+		<h1>NEMO</h1>
+		<h4>PRODUCTIVITY TOOL</h4>
+	</div>
+	<hr width="10%">
 	<div id="time">00:00</div>
 	<div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Focus Timer</h2>
+        <h2 id="status">working!</h2>
 		<form>
 			<center><table>
 				<tr id="labels">
@@ -106,18 +110,18 @@
 					<td>seconds</td>
 				</tr>
 				<tr>
-					<td>Work:</td>
+					<td>work</td>
 					<td><input type="number" class="input-block-level" id="workminutes" min="0" max="60" value="25"></td>
 					<td><input type="number" class="input-block-level" id="workseconds" min="0" max="59" value="00"></td>
 				</tr>
 				<tr>
-					<td>Relax:</td>
+					<td>relax</td>
 					<td><input type="number" class="input-block-level" id="relaxminutes" min="0" max="20" value="5"></td>
 					<td><input type="number" class="input-block-level" id="relaxseconds" min="0" max="59" value="00"></td>
 				</tr>
 			</table></center>
 		</form>
-		<button id="button" onclick="changeButton();">Start</button>
+		<button id="button" onclick="changeButton();">START</button>
       </form>
 
     </div> <!-- /container -->
