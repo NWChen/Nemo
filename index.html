@@ -2,13 +2,59 @@
 <html>
 <head>
 	<title>Nemo</title>
-	<link href="../assets/css/bootstrap.css" rel="stylesheet">
-	<script src=/js/script.js></script>
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<script src="script.js"></script>
     <style type="text/css">
       body {
+      	opacity: 1.0;
+      	vertical-align: middle;
+      	font-family: 'Lato', sans-serif;
+      	text-align: center;
+      	margin-top: 10em;
+      	margin-left: auto;
+      	margin-right: auto;
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: #f5f5f5;
+        background-image: url('background.jpg');
+        background-position: top center;
+        background-color: #3498db;
+      }
+
+      #status {
+      	max-width: 170px;
+      	vertical-align: middle;
+      	color: #ecf0f1;
+      	font-size: 2em;
+      	margin-left: auto;
+      	margin-right: auto;
+      	opacity: 0.5;
+      	background-color: #000000;
+      	border-radius: 6px;
+      }
+
+      #time {
+      	color: #ecf0f1;
+      	font-size: 10em;
+      }
+
+      #labels {
+      	text-align: center;
+      	color: #b2b2b2;
+      	font-size: 0.6em;
+      }
+
+      #button {
+      	opacity: 0.8;
+      	border-radius: 3px;
+      	font-size: 1.5em;
+      	font-family: 'Montserrat', sans-serif;
+      	background-color: #f5f5f5;
+      }
+
+      #button:hover{
+      	opacity: 1.0;
       }
 
       .form-signin {
@@ -26,6 +72,7 @@
       }
       .form-signin .form-signin-heading,
       .form-signin .checkbox {
+      	font-family: 'Montserrat', 'Lato', sans-serif;
         margin-bottom: 10px;
       }
       .form-signin input[type="text"],
@@ -36,34 +83,39 @@
         padding: 7px 9px;
       }
 
+      .input-block-level{
+      	font-family: 'Lato', sans-serif;
+      }
+
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 
 <body onload="startTime();">
+	<div id="status">working</div>
 	<div id="time">00:00</div>
 	<div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">Focus Timer</h2>
 		<form>
-			<table>
-				<tr>
+			<center><table>
+				<tr id="labels">
 					<td></td>
 					<td>minutes</td>
 					<td>seconds</td>
 				</tr>
 				<tr>
 					<td>Work:</td>
-					<td><input type="number" class="input-block-level" id="workminutes" min="0" max="60" value="60"></td>
+					<td><input type="number" class="input-block-level" id="workminutes" min="0" max="60" value="25"></td>
 					<td><input type="number" class="input-block-level" id="workseconds" min="0" max="59" value="00"></td>
 				</tr>
 				<tr>
 					<td>Relax:</td>
-					<td><input type="number" class="input-block-level" id="relaxminutes" min="0" max="20" value="10"></td>
+					<td><input type="number" class="input-block-level" id="relaxminutes" min="0" max="20" value="5"></td>
 					<td><input type="number" class="input-block-level" id="relaxseconds" min="0" max="59" value="00"></td>
 				</tr>
-			</table>
+			</table></center>
 		</form>
 		<button id="button" onclick="changeButton();">Start</button>
       </form>
